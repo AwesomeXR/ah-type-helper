@@ -1,0 +1,19 @@
+{
+  "name": "ah-type-helper",
+  "version": "1.0.5",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "ci": "prettier --check src && tsc -p tsconfig.json --noEmit && jest --detectOpenHandles",
+    "build": "tsc -p tsconfig.build.json -outDir dist",
+    "release": "npm run ci && npm run build && release-it"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.2",
+    "release-it": "^16.1.5",
+    "typescript": "^5.0.3"
+  },
+  "sideEffect": false
+}
